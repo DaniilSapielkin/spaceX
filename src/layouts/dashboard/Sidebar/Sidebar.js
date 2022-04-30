@@ -12,7 +12,7 @@ const Sidebar = ({
   companies,
   getCompanyData,
   isOpenSidebar,
-  setIsOpenMenuBurger,
+  setIsOpenSidebar,
 }) => {
   useEffect(() => {
     getCompanyData();
@@ -20,7 +20,7 @@ const Sidebar = ({
 
   const handleChoose = (id) => {
     setChooseCompany(id);
-    isOpenSidebar && setIsOpenMenuBurger(false);
+    isOpenSidebar && setIsOpenSidebar(false);
   };
 
   return (
@@ -36,7 +36,7 @@ const Sidebar = ({
                     [classes.listItemActive]: isActive,
                   })
                 }
-                to={`/spaceX/info/${company.id}`}
+                to={`/info/${company.id}`}
                 onClick={() => handleChoose(company.id)}
               >
                 {company.name}

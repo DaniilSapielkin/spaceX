@@ -11,11 +11,11 @@ export default function Router() {
       path: "",
       element: <DashboardLayout />,
       children: [
-        { path: "/", element: <Navigate to="/spaceX/dashboard" /> },
-        { path: "/spaceX/dashboard", element: <DashboardPage /> },
-        { path: "/spaceX/info/:nameCompany", element: <InfoCompany /> },
-        { path: "/spaceX/404", element: <Page404 /> },
-        { path: "*", element: <Navigate to="/spaceX/404" /> },
+        { path: "/", element: <Navigate to="/dashboard" /> },
+        { path: "/dashboard", element: <DashboardPage /> },
+        { path: "/info/:nameCompany", element: <InfoCompany /> },
+        { path: "/404", element: <Page404 /> },
+        { path: "*", element: <Navigate to="/404" /> },
       ],
     },
   ]);

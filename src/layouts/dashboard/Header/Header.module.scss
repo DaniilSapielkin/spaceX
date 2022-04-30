@@ -1,0 +1,52 @@
+.root {
+  display: flex;
+  margin: 2.5rem 2.5rem 2rem;
+  align-items: center;
+}
+
+.iconHeader {
+  width: 25vw;
+  max-width: 320px;
+  min-width: 210px;
+  overflow: hidden;
+}
+
+.searchBar {
+  width: 75vw;
+  margin: 0 0 0 3.125rem;
+  min-width: 210px;
+}
+
+.humburgerMenu {
+  display: none;
+}
+
+@media (max-width: 710px) {
+  .root {
+    flex-direction: column;
+    margin: 1.875rem 1.25rem;
+  }
+
+  .humburgerMenu {
+    display: block;
+    color: #fff;
+  }
+
+  .iconHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .searchBar {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.close {
+  display: none;
+}

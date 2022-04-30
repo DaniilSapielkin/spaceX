@@ -8,14 +8,14 @@ import { Page404 } from "./pages/404/Page404";
 export default function Router() {
   return useRoutes([
     {
-      path: "/",
+      path: "",
       element: <DashboardLayout />,
       children: [
-        { path: "/", element: <Navigate to="/dashboard" /> },
-        { path: "/dashboard", element: <DashboardPage /> },
-        { path: "/info/:nameCompany", element: <InfoCompany /> },
-        { path: "/404", element: <Page404 /> },
-        { path: "*", element: <Navigate to="/404" /> },
+        { path: "/", element: <Navigate to="/spaceX/dashboard" /> },
+        { path: "/spaceX/dashboard", element: <DashboardPage /> },
+        { path: "/spaceX/info/:nameCompany", element: <InfoCompany /> },
+        { path: "/spaceX/404", element: <Page404 /> },
+        { path: "*", element: <Navigate to="/spaceX/404" /> },
       ],
     },
   ]);

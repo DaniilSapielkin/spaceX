@@ -36,7 +36,7 @@ const Sidebar = ({
                     [classes.listItemActive]: isActive,
                   })
                 }
-                to={`/info/${company.id}`}
+                to={`/spaceX/info/${company.id}`}
                 onClick={() => handleChoose(company.id)}
               >
                 {company.name}

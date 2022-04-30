@@ -34,7 +34,7 @@ const SearchBar = ({ companies, setChooseCompany }) => {
   const handleChangeValue = (value) => {
     setValue(value);
 
-    value && navigate(`/info/${value.value}`, { replace: true });
+    value && navigate(`/spaceX/info/${value.value}`, { replace: true });
   };
 
   return (

@@ -10,7 +10,7 @@ const initialState = {
   loading: false,
 };
 
-export default (state = initialState, { type, payload }) => {
+const Company = (state = initialState, { type, payload }) => {
   switch (type) {
     case GET_COMPANY_DATA:
       return {
@@ -39,3 +39,5 @@ export default (state = initialState, { type, payload }) => {
       };
   }
 };
+
+export default Company;

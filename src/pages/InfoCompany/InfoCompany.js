@@ -33,15 +33,14 @@ export const InfoCompany = () => {
     }
   }, [location.pathname, company.companies, company.chooseCompany]);
 
-  const countCargoBoxs = (value) => {
-    const countArray = (arr) => {
-      let x = 0;
-      return arr.map((i) => (x += i), x).reverse()[0];
-    };
-
-    return Math.ceil(
-      countArray(value.split(",").map((value) => Number(value))) / 10
-    );
+  const countCargoBox = (value) => {
+    const arr = value
+      .split(",")
+      .reduce(
+        (previousValue, currentValue) => +previousValue + +currentValue,
+        0
+      );
+    return Math.ceil(arr / 10);
   };
 
   return (
@@ -63,7 +62,7 @@ export const InfoCompany = () => {
                 Number of required cargo bays
               </div>
               <div className={classes.cargoBays}>
-                {countCargoBoxs(currentCompany.boxes)}
+                {countCargoBox(currentCompany.boxes)}
               </div>
             </>
           )}
